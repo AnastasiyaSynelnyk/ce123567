@@ -7,7 +7,7 @@
     <dimen name="title_fashion_tsize">20sp</dimen>
     <dimen name="margin_bot">5dp</dimen>
     <dimen name="margin_top">5dp</dimen>
-    <dimen name="perform_size">5sp</dimen>
+    <dimen name="perform_size">8sp</dimen>
     <dimen name="title_margin_bot">1dp</dimen>
     <dimen name="state_width">50dp</dimen>
     <dimen name="state_height">20dp</dimen>

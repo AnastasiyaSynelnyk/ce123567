@@ -32,9 +32,9 @@
             android:layout_width="@dimen/state_width"
             android:layout_height="@dimen/state_height"
             android:layout_marginBottom="@dimen/margin_bottom_state"
+            android:gravity="center"
             android:background="@drawable/oval_text_view"
-            android:text="
-                           @string/state_text"
+            android:text="@string/state_text"
             android:textSize="@dimen/perform_size" />
 
         <TextView
@@ -131,7 +131,7 @@
 
             <TextView
                 android:id="@+id/designer"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_bottom_start"
                 android:layout_marginTop="@dimen/margin_top"
@@ -141,7 +141,7 @@
 
             <TextView
                 android:id="@+id/stockholm"
-                android:layout_width="match_parent"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_top"
                 android:layout_weight=".4"
