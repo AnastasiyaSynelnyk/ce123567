@@ -201,6 +201,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bot"
             android:layout_marginTop="@dimen/margin_top"
             android:text="@string/description"
             android:textSize="@dimen/description_text_size" />
@@ -208,6 +209,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/my_recycler_view"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_top"
             android:layout_height="match_parent"
             android:scrollbars="horizontal"
 
