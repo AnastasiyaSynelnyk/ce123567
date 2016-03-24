@@ -22,11 +22,10 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    View.OnClickListener onClickListener;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    View.OnClickListener onClickListener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Text, displaying current state", Toast.LENGTH_LONG);
                 toast.show();
+                toast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
