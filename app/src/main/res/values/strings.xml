@@ -40,6 +40,21 @@ SOFTWARE.-->
         or skirt to elevate them. What the new Channel is likely to become known for, though, is the perfectly slouchy,
         high-shine satin suits. You could wear them with a blazer, a cardigan, or a matching satin blouse and go just about anywhere.</string>
 
+    <string name="LangTitle">Language</string>
+    <string name="LangDialogTitle">Choose language:</string>
+    <string name="LangSummary">Application language.\nRestart application.</string>
+    <string-array name="entries_lang">
+        <item>Language</item>
+        <item>English</item>
+        <item>Ukranian</item>
+    </string-array>
+    <string-array name="entryvalues_lang">
+        <item>default</item>
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+
+
     <string-array name="models_array">
         <item>http://assets.vogue.com/photos/56d84f4cd44ad6bd4ce14a22/master/pass/_MON0273.jpg</item>
         <item>http://assets.vogue.com/photos/55f830972f0cd74d7e5f08ee/master/pass/_ROD0387.jpg</item>
@@ -54,10 +69,7 @@ SOFTWARE.-->
         <item>http://assets.vogue.com/photos/55f82fa5dec6259042310569/master/pass/_ROD0253.jpg</item>
         <item>http://assets.vogue.com/photos/55f830484399ed4a7e86e02e/master/pass/_ROD0365.jpg</item>
         <item>http://assets.vogue.com/photos/56d8516bd44ad6bd4ce14a57/master/pass/_MON0783.jpg</item>
-        <item>http://assets.vogue.com/photos/56cdf41c11a53bd574bc8121/master/pass/_ARC0013.jpg</item>
-        <item>http://assets.vogue.com/photos/56d8530fd44ad6bd4ce14a84/master/pass/_MON1051.jpg</item>
-        <item>http://assets.vogue.com/photos/56ca1402a20a782629c3c652/master/pass/KIM_0637.jpg</item>
-        <item>http://assets.vogue.com/photos/56d852cb40a5ec107d06c45a/master/pass/_MON1029.jpg</item>
+      
 
 
 
