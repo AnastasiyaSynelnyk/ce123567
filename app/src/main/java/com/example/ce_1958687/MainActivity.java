@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Title", Toast.LENGTH_LONG);
+
                 toast.show();
                 toast.setGravity(Gravity.CENTER, 10, 10);
 
@@ -130,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Designer's name", Toast.LENGTH_LONG);
                 toast.show();
+                toast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
