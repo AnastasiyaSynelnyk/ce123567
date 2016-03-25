@@ -87,16 +87,14 @@ SOFTWARE.-->
                     android:text="@string/starting"
                     android:textSize="@dimen/layout_text_size" />
 
-                <TextView
-                    android:id="@+id/str_data"
-                    android:layout_width="@dimen/general_layout_width"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".4"
-                    android:text="@string/start_date"
-                    android:textSize="@dimen/layout_text_size"
-
-
-                    />
+                                                                           <TextView
+                                                                           android:id="@+id/str_data"
+                                                                           android:layout_width="@dimen/general_layout_width"
+                                                                           android:layout_height="wrap_content"
+                                                                           android:layout_weight=".4"
+                                                                           android:text="@string/start_date"
+                                                                           android:textSize="@dimen/layout_text_size"
+                                                                                     />
 
 
             </LinearLayout>
