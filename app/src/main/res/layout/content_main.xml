@@ -166,16 +166,16 @@ SOFTWARE.-->
                     android:text="@string/alexander_mc_queen"
                     android:textSize="@dimen/layout_text_size" />
 
-                <TextView
-                    android:id="@+id/stockholm"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_top"
-                    android:layout_weight=".3"
-                    android:text="@string/stockholmfall"
-                    android:textSize="@dimen/layout_text_size"
+                                                                                <TextView
+                                                                                 android:id="@+id/stockholm"
+                                                                                 android:layout_width="50dp"
+                                                                                 android:layout_height="wrap_content"
+                                                                                 android:layout_marginTop="@dimen/margin_top"
+                                                                                 android:layout_weight=".3"
+                                                                                 android:text="@string/stockholmfall"
+                                                                                 android:textSize="@dimen/layout_text_size"
 
-                    />
+                                                                                      />
 
 
             </LinearLayout>
@@ -202,17 +202,17 @@ SOFTWARE.-->
                     android:textSize="@dimen/layout_text_size" />
 
 
-                <TextView
-                    android:id="@+id/spring_coutre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bottom_start"
-                    android:layout_marginTop="@dimen/margin_top"
-                    android:layout_weight=".5"
-                    android:text="@string/spring_couture"
-                    android:textSize="@dimen/layout_text_size"
+                                                                                <TextView
+                                                                                 android:id="@+id/spring_coutre"
+                                                                                 android:layout_width="match_parent"
+                                                                                 android:layout_height="wrap_content"
+                                                                                 android:layout_marginBottom="@dimen/margin_bottom_start"
+                                                                                 android:layout_marginTop="@dimen/margin_top"
+                                                                                 android:layout_weight=".5"
+                                                                                 android:text="@string/spring_couture"
+                                                                                 android:textSize="@dimen/layout_text_size"
 
-                    />
+                                                                                   />
 
             </LinearLayout>
 
