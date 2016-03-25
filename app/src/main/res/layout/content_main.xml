@@ -246,9 +246,10 @@ SOFTWARE.-->
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="1dp"
+               android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/rec_pad"
+                android:paddingRight="@dimen/rec_pad"
+                android:layout_height="@dimen/layout_recycler"
                
 
                 />
