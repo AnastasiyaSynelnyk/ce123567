@@ -41,6 +41,6 @@ SOFTWARE.-->
 <dimen name="general_layout_width">1dp</dimen>
 <dimen name="description_text_size">10sp</dimen>
 <dimen name="padding">5dp</dimen>
-<dimen name="layout_recycler">150dp</dimen>
+<dimen name="layout_recycler">450dp</dimen>
 
 </resources>
