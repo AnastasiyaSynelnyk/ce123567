@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplication(), "City", Toast.LENGTH_LONG);
                 toast.show();
+                toast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -179,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Created by brend", Toast.LENGTH_LONG);
                 toast.show();
+                toast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -189,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
                 toast.show();
+                toast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
