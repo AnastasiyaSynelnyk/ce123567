@@ -121,15 +121,15 @@ SOFTWARE.-->
                     android:text="@string/finish"
                     android:textSize="@dimen/layout_text_size" />
 
-                <TextView
-                    android:id="@+id/fin_data"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_bot"
-                    android:layout_marginTop="@dimen/margin_top"
-                    android:layout_weight=".5"
-                    android:text="@string/finish_date"
-                    android:textSize="@dimen/layout_text_size" />
+                                                                            <TextView
+                                                                             android:id="@+id/fin_data"
+                                                                             android:layout_width="match_parent"
+                                                                             android:layout_height="wrap_content"
+                                                                             android:layout_marginBottom="@dimen/margin_bot"
+                                                                             android:layout_marginTop="@dimen/margin_top"
+                                                                             android:layout_weight=".5"
+                                                                             android:text="@string/finish_date"
+                                                                             android:textSize="@dimen/layout_text_size" />
 
 
             </LinearLayout>
