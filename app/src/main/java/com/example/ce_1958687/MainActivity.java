@@ -1,7 +1,12 @@
+package com.example.ce_1958687;
 /*
 MIT License
 
+<<<<<<< Updated upstream
 Copyright (c) 2016. Synelnyk Anastasiya
+=======
+Copyright (c) [year] [fullname]
+>>>>>>> Stashed changes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,27 +27,36 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
  */
-package com.example.ce_1958687;
 
-        import android.app.ActionBar;
-        import android.content.DialogInterface;
-        import android.content.res.Resources;
-        import android.os.Bundle;
-        import android.support.design.widget.FloatingActionButton;
-        import android.support.design.widget.Snackbar;
-        import android.support.v7.app.AppCompatActivity;
-        import android.support.v7.widget.LinearLayoutManager;
-        import android.support.v7.widget.RecyclerView;
-        import android.support.v7.widget.Toolbar;
-        import android.view.Gravity;
-        import android.view.View;
-        import android.view.Menu;
-        import android.view.MenuItem;
-        import android.widget.LinearLayout;
-        import android.widget.TextView;
-        import android.widget.Toast;
 
-        import org.w3c.dom.Text;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.provider.SyncStateContract;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,9 +64,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
+    public SharedPreferences preferences;
+    private Locale locale;
+    private String lang;
+
 
     @Override
-    protected void onCreate(Bundle  savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -169,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplication(), "City", Toast.LENGTH_LONG);
                 toast.show();
                 toast.setGravity(Gravity.CENTER, 10, 10);
+
             }
         });
 
@@ -180,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Created by brend", Toast.LENGTH_LONG);
                 toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -191,17 +209,41 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
                 toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        lang = preferences.getString("lang", "default");
+        if (lang.equals("default")) {
+            lang = getResources().getConfiguration().locale.getCountry();
+        }
+        locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, null);
+
+
     }
+
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, null);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -209,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            return true;
+
         }
         if (id == android.R.id.home) {
             finish();
@@ -220,3 +262,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
