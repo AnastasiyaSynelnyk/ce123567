@@ -237,6 +237,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+        public RecyclerView.LayoutParams generateDefaultLayoutParams() {
+            return new RecyclerView.LayoutParams(
+                    RecyclerView.LayoutParams.WRAP_CONTENT,
+                    RecyclerView.LayoutParams.WRAP_CONTENT);
+        }
+
+
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
