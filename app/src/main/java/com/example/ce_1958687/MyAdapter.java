@@ -38,7 +38,7 @@ import org.w3c.dom.Text;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    Context context;
+    Context mContext;
 
     String[] myDataSet;
 
@@ -53,9 +53,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-    public MyAdapter(Context context, String[] myDataSet) {
+    public MyAdapter(Context mContext, String[] myDataSet) {
+        this.mContext = mContext;
         this.myDataSet = myDataSet;
-        this.context = context;
     }
 
     @Override
@@ -65,13 +65,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.image_view, parent, false);
 
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+        ViewHolder mViewHolder = new ViewHolder(view);
+        return mViewHolder;
     }
 
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
-        Picasso.with(context)
+        Picasso.with(mContext)
                 .load(myDataSet[position])
                 .into(holder.imageFashion);
 
