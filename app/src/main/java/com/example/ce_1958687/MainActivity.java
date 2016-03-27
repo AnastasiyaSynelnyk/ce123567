@@ -5,8 +5,6 @@ MIT License
 <<<<<<< Updated upstream
 Copyright (c) 2016. Synelnyk Anastasiya
 =======
-Copyright (c) [year] [fullname]
->>>>>>> Stashed changes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,6 +36,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.provider.SyncStateContract;
 import android.support.design.widget.FloatingActionButton;
@@ -60,13 +59,10 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    View.OnClickListener onClickListener;
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    public SharedPreferences preferences;
-    private Locale locale;
-    private String lang;
+    View.OnClickListener mOnClickListener;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
 
     @Override
@@ -75,35 +71,35 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
 
-        Resources res = getResources();
-        String[] models = res.getStringArray(R.array.models_array);
+        Resources mRes = getResources();
+        String[] models = mRes.getStringArray(R.array.models_array);
 
-        adapter = new MyAdapter(getBaseContext(), models);
+        mAdapter = new MyAdapter(getBaseContext(), models);
 
-        recyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(mAdapter);
 
 
-        TextView textViewFashWeek = (TextView) findViewById(R.id.paris_fashion_week_view);
-        textViewFashWeek.setClickable(true);
-        textViewFashWeek.setOnClickListener(new View.OnClickListener() {
+        TextView mTextViewFashWeek = (TextView) findViewById(R.id.paris_fashion_week_view);
+        mTextViewFashWeek.setClickable(true);
+        mTextViewFashWeek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Title", Toast.LENGTH_LONG);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Title", Toast.LENGTH_LONG);
 
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
@@ -113,9 +109,9 @@ public class MainActivity extends AppCompatActivity {
         textViewStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Start show", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Start show", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -124,9 +120,9 @@ public class MainActivity extends AppCompatActivity {
         textViewStarData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Date start", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Date start", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -135,9 +131,9 @@ public class MainActivity extends AppCompatActivity {
         textViewFin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Finish point", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Finish point", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -147,9 +143,9 @@ public class MainActivity extends AppCompatActivity {
         textViewFinDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Finish date of the show ", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Finish date of the show ", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -159,9 +155,9 @@ public class MainActivity extends AppCompatActivity {
         textViewState.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Text, displaying current state", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast  mToast = Toast.makeText(getApplicationContext(), "Text, displaying current state", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
@@ -171,9 +167,9 @@ public class MainActivity extends AppCompatActivity {
         textViewDesigner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Designer's name", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplicationContext(), "Designer's name", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
@@ -184,9 +180,9 @@ public class MainActivity extends AppCompatActivity {
         textViewStockholm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplication(), "City", Toast.LENGTH_LONG);
-                toast.show();
-                toast.setGravity(Gravity.CENTER, 10, 10);
+                Toast mToast = Toast.makeText(getApplication(), "City", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
 
             }
         });
@@ -197,8 +193,9 @@ public class MainActivity extends AppCompatActivity {
         textViewChannel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Created by brend", Toast.LENGTH_LONG);
-                toast.show();
+                Toast mToast = Toast.makeText(getApplicationContext(), "Created by brend", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
@@ -207,36 +204,14 @@ public class MainActivity extends AppCompatActivity {
         textViewCouture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
-                toast.show();
+                Toast mToast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
+                mToast.show();
+                mToast.setGravity(Gravity.CENTER, 10, 10);
             }
         });
 
 
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        lang = preferences.getString("lang", "default");
-        if (lang.equals("default")) {
-            lang = getResources().getConfiguration().locale.getCountry();
-        }
-        locale = new Locale(lang);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, null);
-
-
     }
-
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        locale = new Locale(lang);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, null);
-    }
-
-
         public RecyclerView.LayoutParams generateDefaultLayoutParams() {
             return new RecyclerView.LayoutParams(
                     RecyclerView.LayoutParams.WRAP_CONTENT,
