@@ -34,10 +34,13 @@ import android.preference.PreferenceManager;
 
 import java.util.Locale;
 
+//[Comment] Wrong colors
+//[Comment] Unnecessary settings button
+//[Comment] Wrong text sizes
 public class MyApplication extends Application {
 
     private SharedPreferences mSharedPreferences;
-    private Locale mLocale;
+    private Locale mLocale; //[Comment] You don't need it. Just put different strings into different lang directories
     private String mLang;
 
     @Override

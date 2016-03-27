@@ -59,7 +59,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    View.OnClickListener mOnClickListener;
+    View.OnClickListener mOnClickListener; //[Comment] Unused
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -205,14 +205,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast mToast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
+                //[Comment] 1. Copy/paste code. Make one method. 2. Wrong info. You should show control name
                 mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
+                mToast.setGravity(Gravity.CENTER, 10, 10); //[Comment] Magic numbers
             }
         });
 
 
     }
-        public RecyclerView.LayoutParams generateDefaultLayoutParams() {
+        public RecyclerView.LayoutParams generateDefaultLayoutParams() { //[Comment] Unused method. Wrong formatting
             return new RecyclerView.LayoutParams(
                     RecyclerView.LayoutParams.WRAP_CONTENT,
                     RecyclerView.LayoutParams.WRAP_CONTENT);
@@ -224,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu); //[Comment] You don't need this
         return true;
 
     }
@@ -236,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-
+            //[Comment] You don't need this
         }
         if (id == android.R.id.home) {
             finish();

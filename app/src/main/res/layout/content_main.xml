@@ -132,7 +132,7 @@ SOFTWARE.-->
                                                                              android:text="@string/finish_date"
                                                                              android:textSize="@dimen/layout_text_size" 
                                                                                   />
-
+            <!-- [Comment] Something wrong with formatting -->
 
             </LinearLayout>
 

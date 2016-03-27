@@ -36,15 +36,15 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> { //[Comment] Please use more informative names. Without "My"
 
-    Context mContext;
+    Context mContext; //[Comment] wrong visibility modifier.
 
-    String[] myDataSet;
+    String[] myDataSet; //[Comment] wrong visibility modifier.
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public ImageView imageFashion;
+        public ImageView imageFashion; //[Comment] wrong visibility modifier.
 
         public ViewHolder(View imageView) {
             super(imageView);
@@ -54,7 +54,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     public MyAdapter(Context mContext, String[] myDataSet) {
-        this.mContext = mContext;
+        this.mContext = mContext; //[Comment] mContext = context;
         this.myDataSet = myDataSet;
     }
 
