@@ -40,7 +40,8 @@ SOFTWARE.-->
 <dimen name="lines_height">1dp</dimen>
 <dimen name="general_layout_width">1dp</dimen>
 <dimen name="description_text_size">10sp</dimen>
-<dimen name="layout_recycler">300dp</dimen>
+<dimen name="photo_height">200dp</dimen>
+ <dimen name="photo_width">150dp</dimen>
  <dimen name="rec_pad">1dp</dimen>
 
 </resources>
