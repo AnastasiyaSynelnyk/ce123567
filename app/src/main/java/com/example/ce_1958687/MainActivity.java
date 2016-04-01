@@ -55,7 +55,6 @@ SOFTWARE.
 
         import org.w3c.dom.Text;
 
-        import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
