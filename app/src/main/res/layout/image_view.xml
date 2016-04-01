@@ -31,4 +31,5 @@ android:orientation="vertical">
     android:layout_width="@dimen/photo_width"
     android:layout_height="@dimen/photo_height" />
 
+
 </LinearLayout>
