@@ -27,43 +27,49 @@ SOFTWARE.
  */
 
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Bundle;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
-import android.provider.SyncStateContract;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.app.ActionBar;
+        import android.app.Activity;
+        import android.app.Application;
+        import android.content.Context;
+        import android.content.DialogInterface;
+        import android.content.SharedPreferences;
+        import android.content.res.Configuration;
+        import android.content.res.Resources;
+        import android.os.Bundle;
+        import android.preference.PreferenceActivity;
+        import android.preference.PreferenceManager;
+        import android.provider.SyncStateContract;
+        import android.support.design.widget.FloatingActionButton;
+        import android.support.design.widget.Snackbar;
+        import android.support.v7.app.AppCompatActivity;
+        import android.support.v7.widget.LinearLayoutManager;
+        import android.support.v7.widget.RecyclerView;
+        import android.support.v7.widget.Toolbar;
+        import android.view.Gravity;
+        import android.view.View;
+        import android.view.Menu;
+        import android.view.MenuItem;
+        import android.widget.LinearLayout;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import org.w3c.dom.Text;
+        import org.w3c.dom.Text;
 
-import java.util.Locale;
+        import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    View.OnClickListener mOnClickListener;
+
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        makingToasts(this);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,137 +95,45 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new MyAdapter(getBaseContext(), models);
 
         mRecyclerView.setAdapter(mAdapter);
+    }
 
+    private void makingToasts(MainActivity activity) {
 
         TextView mTextViewFashWeek = (TextView) findViewById(R.id.paris_fashion_week_view);
-        mTextViewFashWeek.setClickable(true);
-        mTextViewFashWeek.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Title", Toast.LENGTH_LONG);
+        mTextViewFashWeek.setOnClickListener(this);
 
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
+        TextView mTextView = (TextView) findViewById(R.id.start_show);
+        mTextView.setOnClickListener(this);
 
-            }
-        });
+        TextView mstr_data = (TextView) findViewById(R.id.str_data);
+        mstr_data.setOnClickListener(this);
 
-        TextView textViewStart = (TextView) findViewById(R.id.start_show);
-        textViewStart.setClickable(true);
-        textViewStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Start show", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
-
-        TextView textViewStarData = (TextView) findViewById(R.id.str_data);
-        textViewStarData.setClickable(true);
-        textViewStarData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Date start", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
-
-        TextView textViewFin = (TextView) findViewById(R.id.fin_label);
-        textViewFin.setClickable(true);
-        textViewFin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Finish point", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
+        TextView mTextViewFin = (TextView) findViewById(R.id.fin_label);
+        mTextViewFin.setOnClickListener(this);
 
 
-        TextView textViewFinDate = (TextView) findViewById(R.id.fin_data);
-        textViewFinDate.setClickable(true);
-        textViewFinDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Finish date of the show ", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
+        TextView mTextViewFinDate = (TextView) findViewById(R.id.fin_data);
+        mTextViewFinDate.setOnClickListener(this);
+
+        TextView mTextViewState = (TextView) findViewById(R.id.text_state);
+        mTextViewState.setOnClickListener(this);
+
+        TextView mTextViewDesigner = (TextView) findViewById(R.id.designer);
+        mTextViewDesigner.setOnClickListener(this);
+
+        TextView mTextViewStockholm = (TextView) findViewById(R.id.stockholm);
+        mTextViewStockholm.setOnClickListener(this);
 
 
-        TextView textViewState = (TextView) findViewById(R.id.text_state);
-        textViewState.setClickable(true);
-        textViewState.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast  mToast = Toast.makeText(getApplicationContext(), "Text, displaying current state", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
+        TextView mTextViewChannel = (TextView) findViewById(R.id.channel_show);
+        mTextViewChannel.setOnClickListener(this);
 
-            }
-        });
+        TextView mTextViewCouture = (TextView) findViewById(R.id.spring_coutre);
+        mTextViewCouture.setOnClickListener(this);
 
-        TextView textViewDesigner = (TextView) findViewById(R.id.designer);
-        textViewDesigner.setClickable(true);
-        textViewDesigner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Designer's name", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
+        TextView mFashionRunway =(TextView) findViewById(R.id.fashion_runway);
+        mFashionRunway.setOnClickListener(this);
 
-            }
-        });
-
-
-        TextView textViewStockholm = (TextView) findViewById(R.id.stockholm);
-        textViewStockholm.setClickable(true);
-        textViewStockholm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplication(), "City", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-
-            }
-        });
-
-
-        TextView textViewChannel = (TextView) findViewById(R.id.channel_show);
-        textViewChannel.setClickable(true);
-        textViewChannel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Created by brend", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
-
-        TextView textViewCouture = (TextView) findViewById(R.id.spring_coutre);
-        textViewCouture.setClickable(true);
-        textViewCouture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast mToast = Toast.makeText(getApplicationContext(), "Show attribute", Toast.LENGTH_LONG);
-                mToast.show();
-                mToast.setGravity(Gravity.CENTER, 10, 10);
-            }
-        });
-
-
-    }
-        
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
 
     }
 
@@ -229,10 +143,8 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
-
-        }
         if (id == android.R.id.home) {
+            Toast.makeText(getApplicationContext(), item.getClass().getSimpleName(), Toast.LENGTH_LONG).show();
             finish();
         }
 
@@ -240,5 +152,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-}
+    @Override
+    public void onClick(View v) {
 
+        Toast.makeText(getApplicationContext(), v.getClass().getSimpleName(), Toast.LENGTH_LONG).show();
+
+    }
+
+}
