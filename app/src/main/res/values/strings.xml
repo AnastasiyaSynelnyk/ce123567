@@ -36,24 +36,7 @@ SOFTWARE.-->
     <string name="description">The tenderness and the technical expertise of the paris designers mustered for this spring
         collection was a triumph. Balancing out those basics were a few special pieces like a jaguar-printed calf-hair jacket,
         a sculpted bustier (which they layered over a sweater), and a reversible embroidered souvenir bomber.
-        That mix reflected how women shop now: Most of our wardrobes consist of comfy, but we might invest in a great jacket
-        or skirt to elevate them. What the new Channel is likely to become known for, though, is the perfectly slouchy,
-        high-shine satin suits. You could wear them with a blazer, a cardigan, or a matching satin blouse and go just about anywhere.</string>
-
-    <string name="LangTitle">Language</string>
-    <string name="LangDialogTitle">Choose language:</string>
-    <string name="LangSummary">Application language.\nRestart application.</string>
-    <string-array name="entries_lang">
-        <item>Language</item>
-        <item>English</item>
-        <item>Ukranian</item>
-    </string-array>
-    <string-array name="entryvalues_lang">
-        <item>default</item>
-        <item>en</item>
-        <item>ru</item>
-    </string-array>
-
+        That mix reflected how women shop now.</string>
 
     <string-array name="models_array">
         <item>http://assets.vogue.com/photos/56d84f4cd44ad6bd4ce14a22/master/pass/_MON0273.jpg</item>
