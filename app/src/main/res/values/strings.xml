@@ -20,7 +20,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.-->
-    <string name="app_name">CE-1958687</string>
+   <string name="app_name">CE-1958687</string>
     <string name="action_settings">Settings</string>
     <string name="fashion_title">Paris week fashion</string>
     <string name="state_text">performs</string>
@@ -34,25 +34,9 @@ SOFTWARE.-->
     <string name="spring_couture">Spring Couture</string>
 
     <string name="description">The tenderness and the technical expertise of the paris designers mustered for this spring
-        collection was a triumph. Balancing out those basics were a few special pieces like a jaguar-printed calf-hair jacket,
-        a sculpted bustier (which they layered over a sweater), and a reversible embroidered souvenir bomber.
-        That mix reflected how women shop now: Most of our wardrobes consist of comfy, but we might invest in a great jacket
-        or skirt to elevate them. What the new Channel is likely to become known for, though, is the perfectly slouchy,
-        high-shine satin suits. You could wear them with a blazer, a cardigan, or a matching satin blouse and go just about anywhere.</string>
-
-    <string name="LangTitle">Language</string>
-    <string name="LangDialogTitle">Choose language:</string>
-    <string name="LangSummary">Application language.\nRestart application.</string>
-    <string-array name="entries_lang">
-        <item>Language</item>
-        <item>English</item>
-        <item>Ukranian</item>
-    </string-array>
-    <string-array name="entryvalues_lang">
-        <item>default</item>
-        <item>en</item>
-        <item>ru</item>
-    </string-array>
+        collection was a triumph.That mix reflected how women shop now. Channel is known for the perfectly slouchy,
+        high-shine suits. You could wear them with a blazer, a cardigan, or a satin blouse and go just about anywhere.
+       </string>
 
 
     <string-array name="models_array">
@@ -69,9 +53,7 @@ SOFTWARE.-->
         <item>http://assets.vogue.com/photos/55f82fa5dec6259042310569/master/pass/_ROD0253.jpg</item>
         <item>http://assets.vogue.com/photos/55f830484399ed4a7e86e02e/master/pass/_ROD0365.jpg</item>
         <item>http://assets.vogue.com/photos/56d8516bd44ad6bd4ce14a57/master/pass/_MON0783.jpg</item>
-      
-
-
 
     </string-array>
+
 </resources>
