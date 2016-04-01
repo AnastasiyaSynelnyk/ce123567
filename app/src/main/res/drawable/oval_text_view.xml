@@ -21,15 +21,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.-->
 <!-- Default screen margins, per the Android Design guidelines. -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape android:shape="oval">
-            <size android:height="4dp"
-                android:width="10dp"></size>
-            <solid android:color= "#FBBD1B"></solid>
-
-        </shape>
-    </item>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
 
-</selector>
+    <solid android:color="#F89900" />
+
+    <padding
+        android:left="5dp"
+        android:right="5dp"
+        android:top="3dp"
+        android:bottom="5dp"/>
+
+    <corners android:radius="16dp" />
+</shape>
