@@ -32,15 +32,15 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> { //[Comment] Please use more informative names. Without "My"
+public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> { 
 
-    private Context mContext; //[Comment] wrong visibility modifier.
+    private Context mContext;
 
-    private String[] myDataSet; //[Comment] wrong visibility modifier.
+    private String[] myDataSet;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-       private ImageView mImageFashion; //[Comment] wrong visibility modifier.
+       private ImageView mImageFashion; 
 
         public ViewHolder(View imageView) {
             super(imageView);
@@ -50,7 +50,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     }
 
     public ImageAdapter(Context context, String[] myDataSet) {
-        this.mContext = context; //[Comment] mContext = context;
+        this.mContext = context; 
         this.myDataSet = myDataSet;
     }
 
